@@ -15,10 +15,13 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<script src="js/main.js"></script>
+
 <body>
+
+  <!-- JS principal -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
   <!-- Navbar -->
   <nav class="py-2 bg-body-tertiary border-bottom" style="font-size: 10px;">
@@ -33,12 +36,12 @@
   <header class="p-3 text-bg-dark">
     <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <img src="images/Logo.png" alt="Volt Suspension" width="120" height="30">
+        <img src="{{ url_for('static', filename='images/Logo.png') }}" alt="Volt Suspension" width="120" height="30">
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><a href="#" class="nav-link px-2 text-secondary" style="font-weight: bold;">Principal</a></li>
-        <li><a href="motos.html" class="nav-link px-2 text-white">Motos</a></li>
+        <li><a href="{{ url_for('motos') }}" class="nav-link px-2 text-white">Motos</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Boutique</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Repuestos</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Seguros</a></li>
@@ -49,35 +52,36 @@
       </form>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Iniciar Sesión</button>
+        <!-- Botón para Iniciar sesión -->
+        <a href="{{ url_for('login') }}" class="btn btn-outline-light me-2">Iniciar Sesión</a>
+
+        <!-- Botón para Registrarse -->
+        <a href="{{ url_for('register') }}" class="btn btn-outline-light">Registrarse</a>
+
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero-section position-relative text-center text-light d-flex align-items-center justify-content-center">
-
     <!-- Imagen de fondo -->
-    <img src="images/fondo.jpg" class="position-absolute w-100 h-100 object-fit-cover" style="z-index: 0; filter: brightness(50%);" alt="Fondo de motos">
-
+    <img src="{{ url_for('static', filename='images/fondo.jpg') }}" class="position-absolute w-100 h-100 object-fit-cover" style="z-index: 0; filter: brightness(50%);" alt="Fondo de motos">
     <!-- Contenido encima -->
     <div class="position-relative" style="z-index: 1;">
       <h1 class="display-4 fw-bold text-shadow">Bienvenido a Volt Suspension</h1>
       <p class="lead text-shadow">Tu tienda de confianza para motos, accesorios y seguros</p>
       <a href="#destacados" class="btn btn-primary btn-lg mt-3">Explorar productos</a>
     </div>
-
   </section>
 
-    <!-- Sección de Productos Destacados -->
+  <!-- Sección de Productos Destacados -->
   <section id="destacados" class="container py-5">
     <h2 class="text-center mb-4">Productos Destacados</h2>
-    
     <div class="row">
       <!-- Producto 1 -->
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm border-0">
-          <img src="images/moto1.jpg" class="card-img-top" alt="Moto 1">
+          <img src="{{ url_for('static', filename='images/moto1.jpg') }}" class="card-img-top" alt="Moto 1">
           <div class="card-body">
             <h5 class="card-title">Moto deportiva</h5>
             <p class="card-text">Perfecta para aventuras y velocidad.</p>
@@ -85,11 +89,10 @@
           </div>
         </div>
       </div>
-
       <!-- Producto 2 -->
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm border-0">
-          <img src="images/moto2.jpg" class="card-img-top" alt="Moto 2">
+          <img src="{{ url_for('static', filename='images/moto2.jpg') }}" class="card-img-top" alt="Moto 2">
           <div class="card-body">
             <h5 class="card-title">Moto cruiser</h5>
             <p class="card-text">Ideal para largos viajes en carretera.</p>
@@ -97,11 +100,10 @@
           </div>
         </div>
       </div>
-
       <!-- Producto 3 -->
       <div class="col-md-4 mb-4">
         <div class="card shadow-sm border-0">
-          <img src="images/moto3.jpg" class="card-img-top" alt="Moto 3">
+          <img src="{{ url_for('static', filename='images/moto3.jpg') }}" class="card-img-top" alt="Moto 3">
           <div class="card-body">
             <h5 class="card-title">Moto urbana</h5>
             <p class="card-text">Comodidad y agilidad para la ciudad.</p>
@@ -112,10 +114,9 @@
     </div>
   </section>
 
-    <!-- Sección de Beneficios -->
+  <!-- Sección de Beneficios -->
   <section class="container py-5" id="beneficios">
     <h2 class="text-center mb-4">¿Por qué elegirnos?</h2>
-
     <div class="row text-center">
       <!-- Beneficio 1 -->
       <div class="col-md-4 mb-4">
@@ -125,7 +126,6 @@
         <h4>SOAT y seguros</h4>
         <p>Ofrecemos los mejores planes de seguro para tu moto.</p>
       </div>
-
       <!-- Beneficio 2 -->
       <div class="col-md-4 mb-4">
         <div class="icon-benefit mb-3">
@@ -134,7 +134,6 @@
         <h4>Mantenimiento experto</h4>
         <p>Contamos con talleres autorizados y técnicos especializados.</p>
       </div>
-
       <!-- Beneficio 3 -->
       <div class="col-md-4 mb-4">
         <div class="icon-benefit mb-3">
@@ -145,7 +144,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Footer -->
   <footer class="text-white bg-dark py-4">

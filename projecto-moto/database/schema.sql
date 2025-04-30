@@ -21,6 +21,15 @@ CREATE TABLE categorias (
     descripcion TEXT
 );
 
+CREATE TABLE motos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    marca VARCHAR(100),
+    modelo VARCHAR(50),
+    precio DECIMAL(10, 2),
+    imagen_url VARCHAR(255)
+);
+
 -- Tabla de productos (motos, boutique, repuestos)
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -89,3 +98,9 @@ VALUES
 (1, 1, 1, 8500000),
 (1, 3, 2, 280000),
 (1, 4, 1, 45000);
+
+INSERT INTO motos (nombre, marca, modelo, precio, imagen_url) VALUES
+('Moto X', 'Yamaha', 'YZF-R3', 23000.00, 'https://example.com/moto1.jpg'),
+('Moto Y', 'Honda', 'CBR500R', 25000.00, 'https://example.com/moto2.jpg');
+
+SELECT * FROM motos;

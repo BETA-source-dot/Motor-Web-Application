@@ -60,8 +60,8 @@ body {
   }
   
  
- .form-control::placeholder {
-    color: white;
+  .form-control::placeholder {
+    color: #6c757d; /* gris Bootstrap estándar */
     opacity: 1;
   }
   
@@ -75,84 +75,3 @@ body {
     height: 100%;
   }
 
-/* Login específico */
-.login-page {
-  background-color: #f0f4f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.login-container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-}
-
-.login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.login-container .form-label {
-  font-weight: 500;
-}
-
-.login-container .btn-primary {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.login-container .alert {
-  margin-bottom: 20px;
-}
-
-.login-container img {
-  max-width: 100px;
-  margin: 0 auto 20px;
-  display: block;
-}
-
-/* Registro específico */
-.register-page {
-  background-color: #f0f4f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.register-container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-}
-
-.register-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.register-container .form-label {
-  font-weight: 500;
-}
-
-.register-container .btn-primary {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.register-container img {
-  max-width: 100px;
-  margin: 0 auto 20px;
-  display: block;
-}

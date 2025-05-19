@@ -1,0 +1,10 @@
+/* index.html */
+.pagina-principal .custom-card-height {
+    height: 500px;
+    overflow: hidden;
+}
+
+.pagina-principal .custom-card-height img {
+    object-fit: cover;
+    height: 100%;
+}

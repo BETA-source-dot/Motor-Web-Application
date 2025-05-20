@@ -37,26 +37,17 @@
     </div>
   </header>
 
+<!--Botón de oscuro y claro-->
+<button id="modoToggle" class="modo-boton">🌙</button>
 
 <!-- Destacados -->
-
 <section class="featured-categories">
 <div class="container">
   <div class="title-box">
       <h2>Destacados</h2>
   </div>
-  <div class="row">
-    <div class="col-md-4">
-      <img src="../Assets/Img/Products/Moto.png" alt="">
-    </div>
-    <!-- uno -->
-    <div class="col-md-4">
-      <img src="../Assets/Img/Products/Moto2.png" alt="">
-    </div>
-    <!-- dos -->
-    <div class="col-md-4">
-      <img src="../Assets/Img/Products/Moto3.jpg" alt="">
-    </div>
+  <div class="row" id="destacados">
+
   </div>
 </div>
 </section>
@@ -64,8 +55,7 @@
 
 <section class="filtros py-4">
   <div class="container">
-  <div class="py-2 bs-secondary-bg border-bottom">
-    <div class="row g-3">
+    <div class="row justify-content-center g-3 text-center">
       <div class="col-md-3">
         <input type="text" id="filtroModelo" class="form-control" placeholder="Buscar por modelo...">
       </div>
@@ -85,14 +75,9 @@
           <option value="Enduro">Enduro</option>
         </select>
       </div>
-      <div class="col-md-3">
-        <button class="btn btn-outline-dark me-2 w-100" onclick="filtrarProductos()">Buscar</button>
-      </div>
     </div>
   </div>
-  </div>
 </section>
-
 
 
 <!-- En venta -->
@@ -111,6 +96,7 @@
 
   <!-- Código Js -->
   <script src="../Assets/javascript/shop-simulation.js"></script>
+  <script src="../Assets/javascript/Switch.js"></script>
 </body>
 
 </html>

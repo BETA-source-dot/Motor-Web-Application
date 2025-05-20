@@ -1,19 +1,22 @@
 /* Destacados */
-.featured-categories{
+.featured-categories {
     margin: 50px 0;
 }
 
 .featured-categories img {
-    width: 100%; 
-    height: 100%;
-    padding: 20px 0;
-    transition: 1s;
+    width: 100%;
+    height: 250px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta para que no se deformen */
+    transition: 0.5s;
     cursor: pointer;
+    display: block;
+    border-radius: 8px;
 }
 
-.featured-categories img:hover{
-    transform: scale(1.1);
+.featured-categories img:hover {
+    transform: scale(1.05);
 }
+
 
 /* En venta */
 
@@ -116,4 +119,76 @@ justify-content: center;
 
 }
 
-/* Texto */
+/* Switch */
+
+body.modo-oscuro {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.modo-oscuro .featured-categories,
+.modo-oscuro .on-sale {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+.modo-oscuro .product-bottom {
+    background-color: #1a1a1a;
+    border-radius: 0 0 8px 8px;
+}
+
+.modo-oscuro .btn-outline-light {
+    border-color: #bbb;
+    color: #fff;
+}
+
+.modo-oscuro .btn-outline-light:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.modo-oscuro .filtros {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.modo-oscuro .title-box {
+    background-color: #333;
+    color: #fff;
+}
+
+.modo-oscuro .title-box::after {
+    border-top: 40px solid #333;
+}
+
+/* Configuración botón */
+.modo-boton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modo-boton:hover {
+    background-color: #343a40;
+}
+
+.modo-oscuro .modo-boton {
+    background-color: #f1f1f1;
+    color: #121212;
+}
+
+.modo-oscuro .modo-boton:hover {
+    background-color: #e0e0e0;
+}

@@ -5,43 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VOLT SUSPENSION - Principal</title>
 
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="../Assets/css/index-styles.css">
 </head>
 
-<body class="pagina-principal">
+<body>
+
+  <!-- JS principal -->
+  <script src="../Assets/js/main.js"></script>
+
+  <!-- Navbar -->
+  <nav class="py-2 bg-body-tertiary border-bottom" style="font-size: 10px;">
+    <div class="container d-flex flex-wrap">
+    
+    </div>
+  </nav>
 
   <header class="p-3 text-bg-dark">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >
-        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img src="../Assets/Img/Logo.png" alt="Bootstrap" width="120" height="30">
-        </a>
+    <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <img src="../Assets/Img/Logo.png" alt="Volt Suspension" width="120" height="30">
+      </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li class="nav-item"><a href="#" class="nav-link disabled px-2 text-secondary" aria-disabled="true" style="font-weight: bold">Principal</a></li>
-          <li><a href="tienda-motos.html" class="nav-link px-2 text-white">Motos</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Boutique</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Repuestos</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Seguros</a></li>
-        </ul>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 text-secondary" style="font-weight: bold;">Principal</a></li>
+        <li><a href="tienda-motos.html" class="nav-link px-2 text-white">Motos</a></li>
+        <li><a class="nav-link" href="boutique.html">Boutique</a></li>
+        <li><a class="nav-link" href="repuestos.html">Repuestos</a></li>
+        <li><a class="nav-link" href="seguros.html">Seguros</a></li>
+      </ul>
 
+      
 
-        <div class="text-end">
-          <a class="btn btn-outline-light me-2" href="Init.html" role="button">Iniciar Sesión</a>
-          <a class="btn btn-outline-light me-2" href="#" role="button">Registrarse</a>
-        </div>
+      <div class="text-end">
+        <a href="Init.html" class="btn btn-outline-light me-2">Iniciar Sesión</a>
+        <a href="#" class="btn btn-outline-light">Registrarse</a>
       </div>
     </div>
   </header>
 
-  <div class="card text-white custom-card-height">
-    <img src="../Assets/Img/fondo.jpg" class="card-img-top" alt="...">
-    <div class="card-img-overlay bg-white bg-opacity-75 d-flex flex-column justify-content-center text-center"></div>
-  </div>
+  <!-- Hero Section -->
+  <section class="hero-section position-relative text-center text-light d-flex align-items-center justify-content-center">
+    <img src="../Assets/Img/fondo.jpg" class="position-absolute w-100 h-100 object-fit-cover" style="z-index: 0; filter: brightness(50%);" alt="Fondo de motos">
+    <div class="position-relative" style="z-index: 1;">
+      <h1 class="display-4 fw-bold text-shadow">Bienvenido a Volt Suspension</h1>
+      <p class="lead text-shadow">Tu tienda de confianza para motos, accesorios y seguros</p>
+      <a href="#destacados" class="btn btn-primary btn-lg mt-3">Explorar productos</a>
+    </div>
+  </section>
 
+  <!-- Productos Destacados -->
+  <section id="destacados" class="container py-5">
+    <h2 class="text-center mb-4">Productos Destacados</h2>
+    <div class="row">
+      <!-- Producto 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="../Assets/Img/moto1.jpg" class="card-img-top" alt="Moto 1">
+          <div class="card-body">
+            <h5 class="card-title">Moto deportiva</h5>
+            <p class="card-text">Perfecta para aventuras y velocidad.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="../Assets/Img/moto2.jpg" class="card-img-top" alt="Moto 2">
+          <div class="card-body">
+            <h5 class="card-title">Moto cruiser</h5>
+            <p class="card-text">Ideal para largos viajes en carretera.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0">
+          <img src="../Assets/Img/moto3.jpg" class="card-img-top" alt="Moto 3">
+          <div class="card-body">
+            <h5 class="card-title">Moto urbana</h5>
+            <p class="card-text">Comodidad y agilidad para la ciudad.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="container py-5" id="beneficios">
+    <h2 class="text-center mb-4">¿Por qué elegirnos?</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="icon-benefit mb-3">
+          <i class="fas fa-shield-alt fa-3x text-primary"></i>
+        </div>
+        <h4>SOAT y seguros</h4>
+        <p>Ofrecemos los mejores planes de seguro para tu moto.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="icon-benefit mb-3">
+          <i class="fas fa-tools fa-3x text-primary"></i>
+        </div>
+        <h4>Mantenimiento experto</h4>
+        <p>Contamos con talleres autorizados y técnicos especializados.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="icon-benefit mb-3">
+          <i class="fas fa-truck fa-3x text-primary"></i>
+        </div>
+        <h4>Envíos rápidos</h4>
+        <p>Recibe tu moto o accesorio de forma rápida y segura.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-white bg-dark py-4">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2025 Volt Suspension. Todos los derechos reservados.</p>
+      <div>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
